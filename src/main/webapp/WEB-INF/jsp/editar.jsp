@@ -3,23 +3,27 @@
 
 <div class="container">
     <div class="text-center" style="margin:30px">
-        <h3>Agregar Empleado</h3>
+        <h3>Editar Empleado</h3>
     </div>
-    <form action="${urlAgregar}" modelAttribute="empleadoForma" method="POST">
+    <form action="${urlEditar}" modelAttribute="empleadoForma" method="POST">
+      <input type="hidden" name="idEmpleado" value="${empleado.idEmpleado}"/>
       <div class="mb-3">
         <label for="nombreEmpleado" class="form-label">Nombre </label>
-        <input type="text" class="form-control"
-        id="nombreEmpleado" required="true" name="nombreEmpleado">
+        <input type="text" class="form-control" id="nombreEmpleado"
+        required="true" name="nombreEmpleado"
+        value="${empleado.nombreEmpleado}">
       </div>
       <div class="mb-3">
         <label for="departamento" class="form-label">Departamento</label>
         <input type="text" class="form-control"
-        id="departamento" name="departamento">
+        id="departamento" name="departamento"
+        value="${empleado.departamento}">
       </div>
        <div class="mb-3">
               <label for="sueldo" class="form-label">Sueldo</label>
               <input type="number" stay="any"
-              class="form-control" id="sueldo" name="sueldo">
+              class="form-control" id="sueldo" name="sueldo"
+              value="${empleado.sueldo}">
        </div>
        <div class="text-center">
             <button type="submit" class="btn btn-warning btn-sm me-3">Agregar</button>

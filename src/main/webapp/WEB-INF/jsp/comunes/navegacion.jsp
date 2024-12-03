@@ -1,6 +1,11 @@
-<!--  Agregar los url de la aplicacion-->
+<!--  Agregar los url de la aplicacion -->
+<!--  Url para pagina inicio -->
 <c:set var="urlInicio">
     <c:url value="${application.contextPath}/"/>
+</c:set>
+<!--  Url para pagina agregar -->
+<c:set var="urlAgregar">
+    <c:url value="${application.contextPath}/agregar"/>
 </c:set>
 
 <div class="container">
@@ -18,7 +23,7 @@
                            href="${urlInicio}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${urlInicio}/agregar">Agregar Empleado</a>
+                        <a class="nav-link" href="${urlAgregar}">Agregar Empleado</a>
                     </li>
                 </ul>
             </div>
