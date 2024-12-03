@@ -58,4 +58,12 @@ public class IndexControlador {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/eliminar", method = RequestMethod.GET)
+    public String eliminar(@RequestParam int idEmpleado, ModelMap model){
+        Empleado empleado = empleadoServicio.buscarEmpleadoId(idEmpleado);
+        logger.info("El empleado eliminado es: "+ empleado);
+        empleadoServicio.eliminarEmpleado(empleado);
+        return "redirect:/";
+    }
+
 }
